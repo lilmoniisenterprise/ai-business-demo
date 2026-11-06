@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurivane — AI Receptionists, Chatbots & Business Automation | Virellion Apex Demo</title>
+  <meta name="description" content="Interactive demonstration of an AI-powered business website: AI receptionist, chatbot, appointment scheduling, lead capture and workflow automation. Built by Virellion Apex.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="author" content="Virellion Apex">
+  <!-- Canonical URL is a PLACEHOLDER. Replace https://ai.virellionapex.com once your domain is connected and verified. -->
+  <link rel="canonical" href="https://ai.virellionapex.com/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aurivane — AI Business Systems (Demo)">
+  <meta property="og:title" content="Aurivane — AI Receptionists, Chatbots & Business Automation | Virellion Apex Demo">
+  <meta property="og:description" content="Interactive demonstration of an AI-powered business website: AI receptionist, chatbot, appointment scheduling, lead capture and workflow automation. Built by Virellion Apex.">
+  <meta property="og:url" content="https://ai.virellionapex.com/">
+  <meta property="og:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Aurivane abstract signal-topography artwork in deep navy, sage and violet">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aurivane — AI Receptionists, Chatbots & Business Automation | Virellion Apex Demo">
+  <meta name="twitter:description" content="Interactive demonstration of an AI-powered business website: AI receptionist, chatbot, appointment scheduling, lead capture and workflow automation. Built by Virellion Apex.">
+  <meta name="twitter:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" class="has-hero">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-ribbon" role="note"><strong>Demonstration site</strong> · Fictional company · AI features are simulated · Built by <a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Aurivane home">
+        <img src="images/logo.png" alt="" width="36" height="36">
+        <span class="brand-name">Aurivane<small>AI Business Systems</small></span>
+      </a>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="ai-receptionist.html">Receptionist</a></li>
+          <li><a href="chatbot.html">Chatbot</a></li>
+          <li><a href="appointments.html">Scheduling</a></li>
+          <li><a href="automation.html">Automation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm mobile-only" href="appointments.html">Book a consultation</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn--primary btn--sm desktop-only" href="appointments.html">Book a consultation</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="home-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AI business systems · demonstration</p>
+          <h1>Every enquiry answered. <em>Every lead followed up.</em></h1>
+          <p class="lede">Aurivane designs AI receptionists, support assistants and automated workflows that help service businesses respond faster, book more appointments and give their teams time back.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="chatbot.html">Try the AI chatbot demo <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="appointments.html">Book a consultation</a>
+          </div>
+          <div class="hero-meta">
+            <span class="badge badge--demo"><span class="dot"></span>Simulated AI · no live model</span>
+            <span class="badge">No API keys in the browser</span>
+            <span class="badge">Integration-ready</span>
+          </div>
+        </div>
+        <div class="console" aria-labelledby="console-title">
+          <div class="console-bar"><div class="lights" aria-hidden="true"><i></i><i></i><i></i></div><span id="console-title">operations.console</span><span class="badge badge--demo">Sample data</span></div>
+          <div class="console-body">
+            <ul class="feed" id="activity-feed" aria-live="off" aria-label="Simulated automation activity"></ul>
+            <div class="stat-row">
+              <div class="stat"><b id="stat-chats">128</b><span>Chats handled</span></div>
+              <div class="stat"><b id="stat-leads">23</b><span>Leads captured</span></div>
+              <div class="stat"><b id="stat-books">9</b><span>Bookings</span></div>
+            </div>
+          </div>
+          <div class="console-foot"><span class="dot dot--pulse" style="color:var(--amber)"></span>Simulated activity feed — illustrative events, not real customers or results.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container trust-row" aria-label="Capabilities">
+        <span>AI receptionist</span><span>Chat support</span><span>Online scheduling</span><span>Lead qualification</span><span>CRM sync</span><span>Secure server architecture</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Introducing Aurivane</p>
+          <h2>Practical AI for the moments customers reach out.</h2>
+          <p class="lede">Most enquiries arrive when your team is busy, on the phone, or off for the night. Aurivane puts a calm, accurate first response on your website — then hands the work to the right person with everything they need.</p>
+          <ul class="list-check mt-1">
+            <li>Answers grounded in your approved business content</li>
+            <li>Clear disclosure that visitors are talking to an assistant</li>
+            <li>Human handoff for anything sensitive, unusual or urgent</li>
+            <li>Built on a secure server-side design — keys never reach the browser</li>
+          </ul>
+          <a class="link-arrow mt-1" href="about.html">How we approach AI <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="reveal"><figure class="photo"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=75" alt="Team collaborating around laptops" width="1200" height="900" style="aspect-ratio:4 / 3" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: <a href="https://unsplash.com/@anniespratt?utm_source=aurivane_demo&utm_medium=referral" target="_blank" rel="noopener">Annie Spratt</a> / <a href="https://unsplash.com/?utm_source=aurivane_demo&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">AI service highlights</p>
+          <h2>Five working demos. One connected system.</h2>
+          <p class="lede">Each card opens an interactive demonstration. Responses are simulated in your browser so you can explore safely.</p>
+        </div>
+        <div class="bento">
+          <a class="card card--link reveal" href="ai-receptionist.html">
+            <div class="icon "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 18V9a7 7 0 0 1 14 0v9"/><circle cx="12" cy="9" r="2"/></svg></div>
+            <h3>AI Receptionist</h3><p>Greets every visitor, shares hours, answers FAQs and collects appointment requests — day or night.</p>
+            <div class="mini-ui"><div class="bubble-mini bot">Welcome to Aurivane! How can I help?</div><div class="bubble-mini user">Are you open Saturday?</div><div class="bubble-mini bot">Yes — 9:00 AM to 1:00 PM.</div></div>
+            
+            <span class="link-arrow">Try the receptionist <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a class="card card--link reveal" href="chatbot.html">
+            <div class="icon icon--iris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8 11h8M8 14h5"/></svg></div>
+            <h3>Intelligent Chat Support</h3><p>A branded assistant grounded in your own content, with clear handoff to a human when it matters.</p>
+            
+            <div class="mini-ui"><div class="row"><span class="k">Intent</span><span class="v">pricing_question</span></div><div class="row"><span class="k">Source</span><span class="v">knowledge_base</span></div><div class="row"><span class="k">Handoff</span><span class="v">offered</span></div></div>
+            <span class="link-arrow">Open the chatbot <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a class="card card--link reveal" href="appointments.html">
+            <div class="icon "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3"/></svg></div>
+            <h3>Appointment Automation</h3><p>Real-time availability, confirmations and reminders connected to the calendar you already use.</p>
+            
+            
+            <span class="link-arrow">Book a demo slot <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a class="card card--link reveal" href="contact.html#project">
+            <div class="icon icon--amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4Z"/></svg></div>
+            <h3>Lead Capture & Qualification</h3><p>Smart forms that qualify, score and route enquiries straight into your CRM.</p>
+            
+            
+            <span class="link-arrow">Submit a test lead <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a class="card card--link reveal" href="automation.html">
+            <div class="icon icon--iris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a3 3 0 0 1 3 3v6"/></svg></div>
+            <h3>Workflow Automation</h3><p>Connect forms, CRM, inbox and team chat so routine handoffs happen on their own.</p>
+            
+            
+            <span class="link-arrow">Run a workflow <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Automation solutions</p>
+          <h2>From first message to follow-up — automatically.</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><h3>Capture</h3><p>Receptionist, chat and forms collect the request and the details needed to act on it.</p></div>
+          <div class="step reveal"><h3>Understand</h3><p>Intent detection and qualification rules decide what the visitor needs and how urgent it is.</p></div>
+          <div class="step reveal"><h3>Route</h3><p>Leads go to the CRM, bookings to the calendar and escalations to a person — with context attached.</p></div>
+          <div class="step reveal"><h3>Follow up</h3><p>Confirmations, reminders and follow-up tasks fire on schedule so nothing slips.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Feature demonstrations</p>
+          <h2>See what each piece does.</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Feature demonstrations">
+          <button class="tab" role="tab" id="t-rec" aria-controls="p-rec" aria-selected="true">Receptionist</button>
+          <button class="tab" role="tab" id="t-chat" aria-controls="p-chat" aria-selected="false" tabindex="-1">Chatbot</button>
+          <button class="tab" role="tab" id="t-book" aria-controls="p-book" aria-selected="false" tabindex="-1">Scheduling</button>
+          <button class="tab" role="tab" id="t-lead" aria-controls="p-lead" aria-selected="false" tabindex="-1">Lead capture</button>
+        </div>
+        <div class="tab-panel split" role="tabpanel" id="p-rec" aria-labelledby="t-rec">
+          <div><h3>A front desk that never closes</h3><p>Guided flows answer hours and FAQs, explain services, collect contact details and take appointment requests — with validation at every step and a live view of what's been captured.</p><a class="btn btn--primary" href="ai-receptionist.html">Open receptionist demo <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="card"><div class="mini-ui mt-0"><div class="bubble-mini bot">Welcome to Aurivane! How can I help today?</div><div class="bubble-mini user">Request an appointment</div><div class="bubble-mini bot">Great — which day works best?</div></div></div>
+        </div>
+        <div class="tab-panel split" role="tabpanel" id="p-chat" aria-labelledby="t-chat" hidden>
+          <div><h3>Answers on demand, honest about limits</h3><p>Ask about services, integrations, pricing or security. Suggested questions guide visitors, history persists for the session, and unknown questions get a graceful handoff instead of a guess.</p><a class="btn btn--primary" href="chatbot.html">Open chatbot demo <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="card"><div class="mini-ui mt-0"><div class="bubble-mini user">Where are API keys stored?</div><div class="bubble-mini bot">Never in the website code. They live as encrypted environment variables on the server…</div></div></div>
+        </div>
+        <div class="tab-panel split" role="tabpanel" id="p-book" aria-labelledby="t-book" hidden>
+          <div><h3>Booking in four clear steps</h3><p>Choose an appointment type, pick a date and time, add details and confirm. The demo even generates a calendar file. In production it connects to Calendly or your calendar.</p><a class="btn btn--primary" href="appointments.html">Open scheduling demo <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="card"><div class="mini-ui mt-0"><div class="row"><span class="k">Type</span><span class="v">Discovery · 30 min</span></div><div class="row"><span class="k">Date</span><span class="v">Thu · 10:30 AM</span></div><div class="row"><span class="k">Status</span><span class="v">Demo confirmation</span></div></div></div>
+        </div>
+        <div class="tab-panel split" role="tabpanel" id="p-lead" aria-labelledby="t-lead" hidden>
+          <div><h3>Qualified leads, not just form fills</h3><p>Qualification questions feed a scoring model that tiers each enquiry and decides the next step. See the exact payload a CRM would receive — nothing is sent in demo mode.</p><a class="btn btn--primary" href="contact.html#project">Open lead capture demo <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="card"><div class="mini-ui mt-0"><div class="row"><span class="k">Lead score</span><span class="v">74 / 100</span></div><div class="row"><span class="k">Tier</span><span class="v">Warm</span></div><div class="row"><span class="k">Next step</span><span class="v">Same-day follow-up</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split split--top">
+        <div class="reveal">
+          <p class="eyebrow">Customer benefits</p>
+          <h2>What businesses aim to gain.</h2>
+          <p class="lede">These are the outcomes AI customer-experience projects are typically designed around. Actual results depend on each business, and no performance figures are claimed on this demo.</p>
+          <a class="btn mt-1" href="services.html">Explore services <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="reveal">
+          <div class="benefit"><span class="num">01</span><div><h3>Faster first response</h3><p>Visitors get an immediate, accurate answer instead of waiting for a callback.</p></div></div>
+          <div class="benefit"><span class="num">02</span><div><h3>Fewer missed opportunities</h3><p>After-hours enquiries are captured and queued rather than lost.</p></div></div>
+          <div class="benefit"><span class="num">03</span><div><h3>Less repetitive work</h3><p>Routine questions and data entry move off your team's plate.</p></div></div>
+          <div class="benefit"><span class="num">04</span><div><h3>Better-prepared follow-ups</h3><p>Every handoff arrives with the request, history and qualification details attached.</p></div></div>
+          <div class="benefit"><span class="num">05</span><div><h3>Consistent customer experience</h3><p>The same tone, accuracy and policies — every conversation, every time.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div><h2>Talk to the team that built this demo.</h2><p>Virellion Apex designs and develops AI-powered business websites, automations and integrations. Book a consultation to scope a production version for your business.</p></div>
+          <div class="actions">
+            <a class="btn btn--primary" href="appointments.html">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://virellionapex.com" target="_blank" rel="noopener">Contact Virellion Apex</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="36" height="36"><span class="brand-name">Aurivane<small>AI Business Systems</small></span></a>
+          <p>A fictional AI solutions company created to demonstrate AI receptionists, chat support, scheduling and workflow automation for business websites.</p>
+        </div>
+        <div>
+          <h4>Demos</h4>
+          <ul><li><a href="ai-receptionist.html">AI Receptionist</a></li><li><a href="chatbot.html">AI Chatbot</a></li><li><a href="appointments.html">Scheduling</a></li><li><a href="contact.html#project">Lead Capture</a></li><li><a href="contact.html#support">Support Center</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="automation.html">Automation &amp; Integrations</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Built by</h4>
+          <ul><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Request a similar website</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Schedule a consultation</a></li></ul>
+        </div>
+      </div>
+      <div class="disclaimer" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p>This AI-powered website is a demonstration project developed by Virellion Apex. AI conversations, automated responses, scheduling, and lead capture are simulated unless connected to a live backend.</p></div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Virellion Apex · Aurivane is a fictional brand. Contact details shown are placeholders.</span>
+        <span>Photography via <a href="https://unsplash.com/?utm_source=aurivane_demo&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a> · Hero artwork &amp; logo are original</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automation & Integrations — CRM, Scheduling, Messaging & Secure AI Architecture | Aurivane</title>
+  <meta name="description" content="How AI connects securely to business websites: reference architecture, CRM, appointment and communication integrations, and an interactive workflow automation simulator.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="author" content="Virellion Apex">
+  <!-- Canonical URL is a PLACEHOLDER. Replace https://ai.virellionapex.com once your domain is connected and verified. -->
+  <link rel="canonical" href="https://ai.virellionapex.com/automation.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aurivane — AI Business Systems (Demo)">
+  <meta property="og:title" content="Automation & Integrations — CRM, Scheduling, Messaging & Secure AI Architecture | Aurivane">
+  <meta property="og:description" content="How AI connects securely to business websites: reference architecture, CRM, appointment and communication integrations, and an interactive workflow automation simulator.">
+  <meta property="og:url" content="https://ai.virellionapex.com/automation.html">
+  <meta property="og:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Aurivane abstract signal-topography artwork in deep navy, sage and violet">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automation & Integrations — CRM, Scheduling, Messaging & Secure AI Architecture | Aurivane">
+  <meta name="twitter:description" content="How AI connects securely to business websites: reference architecture, CRM, appointment and communication integrations, and an interactive workflow automation simulator.">
+  <meta name="twitter:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="automation" class="has-hero">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-ribbon" role="note"><strong>Demonstration site</strong> · Fictional company · AI features are simulated · Built by <a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Aurivane home">
+        <img src="images/logo.png" alt="" width="36" height="36">
+        <span class="brand-name">Aurivane<small>AI Business Systems</small></span>
+      </a>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="ai-receptionist.html">Receptionist</a></li>
+          <li><a href="chatbot.html">Chatbot</a></li>
+          <li><a href="appointments.html">Scheduling</a></li>
+          <li><a href="automation.html">Automation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm mobile-only" href="appointments.html">Book a consultation</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn--primary btn--sm desktop-only" href="appointments.html">Book a consultation</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a> / Automation &amp; Integrations</p>
+        <p class="eyebrow">Technology & integration</p>
+        <h1>Automation that connects your whole customer journey.</h1>
+        <p class="lede">How AI plugs into your website, CRM, calendar and messaging — securely — plus a workflow simulator you can run right now.</p>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split split--top">
+        <div class="reveal">
+          <p class="eyebrow">How AI connects to a website</p>
+          <h2>The browser never talks to the AI provider directly.</h2>
+          <p>A secure integration puts a small server layer between your website and every outside service. The website sends a visitor's message or form to <em>your</em> endpoint. That endpoint checks it, adds approved business context, calls the AI model or business system with a secret key, and returns only what the visitor should see.</p>
+          <ul class="list-check">
+            <li>API keys are stored as encrypted server environment variables</li>
+            <li>Input validation, rate limits and bot protection on every endpoint</li>
+            <li>Only minimum necessary data is sent to third parties</li>
+            <li>Logs exclude sensitive fields; retention is defined up front</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <pre class="code" aria-label="Example request flow"><span class="c">// Browser (public) — no secrets</span>
+<span class="k">fetch</span>(<span class="s">"/api/chat"</span>, { method: <span class="s">"POST"</span>, body: JSON.stringify({ messages }) })
+
+<span class="c">// Server function (private) — Cloudflare Pages Function</span>
+<span class="k">export async function</span> onRequestPost({ request, env }) {
+  <span class="c">// validate input, rate-limit, then:</span>
+  <span class="k">const</span> res = <span class="k">await</span> fetch(PROVIDER_URL, {
+    headers: { <span class="s">"x-api-key"</span>: env.AI_API_KEY }  <span class="c">// secret stays here</span>
+  });
+  <span class="k">return</span> Response.json({ reply });
+}</pre>
+          <p class="small muted mt-1">Simplified example. The full, commented version is in the project README.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="architecture">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">Secure backend architecture</p><h2>Reference architecture.</h2></div>
+        <div class="arch reveal" role="img" aria-label="Architecture diagram: website sends requests to secure server functions, which call AI providers and business systems using secrets stored on the server.">
+          <div class="arch-col"><h4>Public</h4><div class="arch-node">Website (static)<small>HTML, CSS, JS on Cloudflare Pages</small></div><div class="arch-node">Visitor browser<small>No keys · no direct provider calls</small></div></div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-col"><h4>Private server layer</h4><div class="arch-node secure">/api/chat · /api/lead<small>Pages Functions / Workers</small></div><div class="arch-node secure">Validation · rate limits<small>Turnstile bot check · schema checks</small></div><div class="arch-node locked">Secrets vault<small>AI_API_KEY · CRM_TOKEN (env vars)</small></div></div>
+          <div class="arch-arrow" aria-hidden="true">→</div>
+          <div class="arch-col"><h4>Services</h4><div class="arch-node">AI model provider<small>Chat completions</small></div><div class="arch-node">CRM · calendar · helpdesk<small>Via official APIs</small></div><div class="arch-node">Email · SMS · Slack<small>Notifications</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">Workflow simulator</p><h2>Build a workflow and run it.</h2><p class="lede">Choose a trigger and the actions that should follow, then run a simulated execution. No external systems are contacted.</p></div>
+        <div class="builder">
+          <div class="card">
+            <div class="field"><label for="flow-trigger">When this happens…</label>
+              <select id="flow-trigger"><option value="lead">New website lead submitted</option><option value="booking">Appointment requested</option><option value="escalation">Chat escalated to a human</option></select></div>
+            <fieldset class="field mt-1"><legend>…do these things</legend>
+              <div class="checks">
+                <label class="check"><input type="checkbox" name="flow-action" value="qualify" checked>Qualify with scoring rules</label>
+                <label class="check"><input type="checkbox" name="flow-action" value="crm" checked>Create / update CRM contact</label>
+                <label class="check"><input type="checkbox" name="flow-action" value="notify" checked>Notify team in Slack / Teams</label>
+                <label class="check"><input type="checkbox" name="flow-action" value="email">Send confirmation email</label>
+                <label class="check"><input type="checkbox" name="flow-action" value="task">Create follow-up task</label>
+                <label class="check"><input type="checkbox" name="flow-action" value="calendar">Hold calendar slot</label>
+              </div>
+            </fieldset>
+            <button type="button" class="btn btn--primary btn--block mt-1" id="run-flow">Run simulation <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+          <div class="stack">
+            <div class="flow-canvas" id="flow-canvas" aria-live="polite"></div>
+            <div class="run-log" id="run-log" aria-live="polite"><div><span class="ts">--:--:--</span><span class="muted">Run log appears here.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="integrations">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">Integrations</p><h2>Connect the tools you already use.</h2>
+          <p class="lede">Select the systems you'd want in a production plan. <strong id="int-count">0</strong> selected. These are examples of what can be integrated; none are connected on this demo, and no affiliation with these vendors is implied.</p></div>
+
+        <h3 class="mt-2">CRM</h3>
+        <div class="int-grid"><button type="button" class="int-tile" aria-pressed="false"><strong>HubSpot</strong><span>Contacts, deals, timelines</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Salesforce</strong><span>Leads, opportunities</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Zoho CRM</strong><span>Leads, workflows</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Pipedrive</strong><span>Pipeline stages</span><span class="state">Not connected · demo</span></button></div>
+        <h3 class="mt-2">Scheduling</h3>
+        <div class="int-grid"><button type="button" class="int-tile" aria-pressed="false"><strong>Calendly</strong><span>Embedded booking</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Google Calendar</strong><span>Availability & events</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Microsoft 365</strong><span>Outlook calendars</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Cal.com</strong><span>Open-source scheduling</span><span class="state">Not connected · demo</span></button></div>
+        <h3 class="mt-2">Communication</h3>
+        <div class="int-grid"><button type="button" class="int-tile" aria-pressed="false"><strong>Slack</strong><span>Team alerts</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Microsoft Teams</strong><span>Channel notifications</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Email (Resend / SendGrid)</strong><span>Transactional email</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Twilio SMS</strong><span>Text reminders</span><span class="state">Not connected · demo</span></button></div>
+        <h3 class="mt-2">Support</h3>
+        <div class="int-grid"><button type="button" class="int-tile" aria-pressed="false"><strong>Zendesk</strong><span>Tickets & macros</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Freshdesk</strong><span>Ticketing</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Help Scout</strong><span>Shared inbox</span><span class="state">Not connected · demo</span></button><button type="button" class="int-tile" aria-pressed="false"><strong>Intercom</strong><span>Conversations</span><span class="state">Not connected · demo</span></button></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-3">
+        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v5"/></svg></div><h3>CRM integration</h3><p>Leads from forms, chat and the receptionist are upserted as contacts with source, interests, score and transcript — then assigned to the right owner.</p></div>
+        <div class="card reveal"><div class="icon icon--iris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3"/></svg></div><h3>Appointment management</h3><p>Availability is read from the team calendar, bookings create events with video links, and reminders and reschedules flow automatically.</p></div>
+        <div class="card reveal"><div class="icon icon--amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8 11h8M8 14h5"/></svg></div><h3>Communication</h3><p>Escalations alert a channel, confirmations go by email, reminders by SMS — each through a server function holding the provider credentials.</p></div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div><h2>Plan your integration with Virellion Apex.</h2><p>Get a secure, documented architecture for connecting AI to your website, CRM, calendar and support tools.</p></div>
+          <div class="actions">
+            <a class="btn btn--primary" href="appointments.html">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://virellionapex.com" target="_blank" rel="noopener">Contact Virellion Apex</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="36" height="36"><span class="brand-name">Aurivane<small>AI Business Systems</small></span></a>
+          <p>A fictional AI solutions company created to demonstrate AI receptionists, chat support, scheduling and workflow automation for business websites.</p>
+        </div>
+        <div>
+          <h4>Demos</h4>
+          <ul><li><a href="ai-receptionist.html">AI Receptionist</a></li><li><a href="chatbot.html">AI Chatbot</a></li><li><a href="appointments.html">Scheduling</a></li><li><a href="contact.html#project">Lead Capture</a></li><li><a href="contact.html#support">Support Center</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="automation.html">Automation &amp; Integrations</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Built by</h4>
+          <ul><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Request a similar website</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Schedule a consultation</a></li></ul>
+        </div>
+      </div>
+      <div class="disclaimer" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p>This AI-powered website is a demonstration project developed by Virellion Apex. AI conversations, automated responses, scheduling, and lead capture are simulated unless connected to a live backend.</p></div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Virellion Apex · Aurivane is a fictional brand. Contact details shown are placeholders.</span>
+        <span>Photography via <a href="https://unsplash.com/?utm_source=aurivane_demo&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a> · Hero artwork &amp; logo are original</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

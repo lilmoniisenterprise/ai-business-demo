@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Receptionist Demo — Hours, FAQs & Appointment Requests | Aurivane</title>
+  <meta name="description" content="Interactive AI receptionist demonstration: welcome messages, business hours, FAQs, service enquiries, appointment requests and contact collection. Simulated, no live AI.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="author" content="Virellion Apex">
+  <!-- Canonical URL is a PLACEHOLDER. Replace https://ai.virellionapex.com once your domain is connected and verified. -->
+  <link rel="canonical" href="https://ai.virellionapex.com/ai-receptionist.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aurivane — AI Business Systems (Demo)">
+  <meta property="og:title" content="AI Receptionist Demo — Hours, FAQs & Appointment Requests | Aurivane">
+  <meta property="og:description" content="Interactive AI receptionist demonstration: welcome messages, business hours, FAQs, service enquiries, appointment requests and contact collection. Simulated, no live AI.">
+  <meta property="og:url" content="https://ai.virellionapex.com/ai-receptionist.html">
+  <meta property="og:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Aurivane abstract signal-topography artwork in deep navy, sage and violet">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Receptionist Demo — Hours, FAQs & Appointment Requests | Aurivane">
+  <meta name="twitter:description" content="Interactive AI receptionist demonstration: welcome messages, business hours, FAQs, service enquiries, appointment requests and contact collection. Simulated, no live AI.">
+  <meta name="twitter:image" content="https://ai.virellionapex.com/images/hero.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="receptionist" class="has-hero">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-ribbon" role="note"><strong>Demonstration site</strong> · Fictional company · AI features are simulated · Built by <a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Aurivane home">
+        <img src="images/logo.png" alt="" width="36" height="36">
+        <span class="brand-name">Aurivane<small>AI Business Systems</small></span>
+      </a>
+      <nav class="nav-menu" id="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="ai-receptionist.html">Receptionist</a></li>
+          <li><a href="chatbot.html">Chatbot</a></li>
+          <li><a href="appointments.html">Scheduling</a></li>
+          <li><a href="automation.html">Automation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm mobile-only" href="appointments.html">Book a consultation</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn--primary btn--sm desktop-only" href="appointments.html">Book a consultation</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a> / AI Receptionist</p>
+        <p class="eyebrow">AI receptionist demo</p>
+        <h1>Meet Aria, the virtual front desk.</h1>
+        <p class="lede">Choose an option or type a message. Aria shares hours, answers questions, explains services and walks you through an appointment request.</p>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="notice" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p><strong>Demonstration receptionist.</strong> This receptionist follows pre-written conversation flows in your browser. It is not connected to an AI model, a calendar or a CRM, and no one is notified. Please use sample details only.</p></div>
+        <div class="reception mt-2" id="receptionist">
+          <aside class="info-col side-panel" aria-label="Business information">
+            <div class="card">
+              <h3>Business hours</h3>
+              <div data-hours-status class="status-pill"></div>
+              <ul class="hours-list" data-hours-table></ul>
+              <p class="small muted mt-1 mb-0">Sample hours · shown in your local time for the demo</p>
+            </div>
+            <div class="card">
+              <h3>Quick actions</h3>
+              <div class="action-grid">
+                <button type="button" data-reception="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hours</button>
+                <button type="button" data-reception="faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>FAQs</button>
+                <button type="button" data-reception="services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M2 14h2M20 14h2M9 13v2M15 13v2"/></svg>Services</button>
+                <button type="button" data-reception="appt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3"/></svg>Appointment</button>
+                <button type="button" data-reception="contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact me</button>
+                <button type="button" data-reception="human"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>A person</button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="chat-shell" role="region" aria-label="Receptionist conversation">
+            <div class="chat-head">
+              <div class="agent"><div class="avatar" aria-hidden="true">A</div><div><div class="agent-name">Aria · Virtual Receptionist</div><div class="agent-sub"><span class="dot"></span>Simulated · scripted demo</div></div></div>
+              <div class="chat-tools"><button class="icon-btn" type="button" id="reception-reset" aria-label="Restart conversation" title="Restart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></button></div>
+            </div>
+            <div class="chat-log" aria-live="polite" aria-relevant="additions"></div>
+            <div class="chat-input">
+              <form class="chat-form" autocomplete="off">
+                <label class="sr-only" for="reception-input">Type a message to the receptionist</label>
+                <input id="reception-input" type="text" maxlength="500" placeholder="Type a reply or choose an option…">
+                <button class="btn btn--primary" type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg><span class="label">Send</span></button>
+              </form>
+              <p class="chat-hint">Scripted responses · Use sample details · Nothing leaves your browser</p>
+            </div>
+          </div>
+
+          <aside class="capture-col side-panel" aria-label="Captured information">
+            <div class="card">
+              <div class="flex between"><h3 class="mb-0">Captured details</h3><span class="badge badge--demo">Demo</span></div>
+              <div class="flow-progress" id="flow-progress"></div>
+              <div id="capture-data" aria-live="polite"></div>
+              <p class="small muted mt-1 mb-0">Kept in this tab's memory only and cleared on refresh. In production this record would be sent securely to your CRM or calendar.</p>
+            </div>
+            <div class="card">
+              <h3>What this demonstrates</h3>
+              <ul class="list-check small mb-0">
+                <li>Welcome message aware of open/closed status</li>
+                <li>FAQ and service answers</li>
+                <li>Step-by-step appointment request</li>
+                <li>Validated contact collection</li>
+                <li>Transparent human-handoff behaviour</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div><h2>Want a receptionist like this on your site?</h2><p>Virellion Apex can build a production receptionist connected to your calendar, CRM and team inbox — with secure server-side AI.</p></div>
+          <div class="actions">
+            <a class="btn btn--primary" href="appointments.html">Book a consultation <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn" href="https://virellionapex.com" target="_blank" rel="noopener">Contact Virellion Apex</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="36" height="36"><span class="brand-name">Aurivane<small>AI Business Systems</small></span></a>
+          <p>A fictional AI solutions company created to demonstrate AI receptionists, chat support, scheduling and workflow automation for business websites.</p>
+        </div>
+        <div>
+          <h4>Demos</h4>
+          <ul><li><a href="ai-receptionist.html">AI Receptionist</a></li><li><a href="chatbot.html">AI Chatbot</a></li><li><a href="appointments.html">Scheduling</a></li><li><a href="contact.html#project">Lead Capture</a></li><li><a href="contact.html#support">Support Center</a></li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="automation.html">Automation &amp; Integrations</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Built by</h4>
+          <ul><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Request a similar website</a></li><li><a href="https://virellionapex.com" target="_blank" rel="noopener">Schedule a consultation</a></li></ul>
+        </div>
+      </div>
+      <div class="disclaimer" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p>This AI-powered website is a demonstration project developed by Virellion Apex. AI conversations, automated responses, scheduling, and lead capture are simulated unless connected to a live backend.</p></div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Virellion Apex · Aurivane is a fictional brand. Contact details shown are placeholders.</span>
+        <span>Photography via <a href="https://unsplash.com/?utm_source=aurivane_demo&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a> · Hero artwork &amp; logo are original</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
